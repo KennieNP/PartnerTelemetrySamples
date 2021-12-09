@@ -1,17 +1,17 @@
-# What is Business Central telemetry?
-Business Central continuously emits telemetry about events that happen in the service.
+# What is telemetry?
+<add product name here> continuously emits telemetry about events that happen in the service.
 
-Read more about telemetry here: https://aka.ms/bctelemetry
+Read more about telemetry here: <add short url here>
 
 # What can I use telemetry for?
 Telemetry can be useful for troubleshooting an issue or to determine how often a feature is used.
 
-# What resources can I find in aka.ms/bctelemetrysamples?
-This repo contains instructions for how you can obtain the telemetry and resources that help you get immediate value from the telemetry.
+# What resources can I find here?
+This repository contains instructions for how you can obtain the telemetry and resources that help you get immediate value from the telemetry.
 
-Please visit the [FAQ page](FAQ.md) for any questions on how to get started, pricing, privacy, and more.
+Please visit the [FAQ page](samples\FAQ.md) for any questions on how to get started, pricing, privacy, and more.
 
-Want some easy to digest introductions to Business Central telemetry? Watch a few short videos to get started: [Business Central Telemetry Videos](VIDEOS.md).
+Want some easy to digest introductions to <add product name here> telemetry? Watch a few short videos to get started: [Business Central Telemetry Videos](samples\Learning resources\VIDEOS.md).
 
 # Disclaimer
 Microsoft Corporation (“Microsoft”) grants you a nonexclusive, perpetual, royalty-free right to use and modify the software code provided by us for the purposes of illustration  ("Sample Code") and to reproduce and distribute the object code form of the Sample Code, provided that you agree: (i) to not use our name, logo, or trademarks to market your software product in which the Sample Code is embedded; (ii) to include a valid copyright notice on your software product in which the Sample Code is embedded; and (iii) to indemnify, hold harmless, and defend us and our suppliers from and against any claims or lawsuits, whether in an action of contract, tort or otherwise, including attorneys’ fees, that arise or result from the use or distribution of the Sample Code or the use or other dealings in the Sample Code. Unless applicable law gives you more rights, Microsoft reserves all other rights not expressly granted herein, whether by implication, estoppel or otherwise. 

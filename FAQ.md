@@ -1,16 +1,13 @@
-# Business Central Telemetry FAQ (Frequently Asked Questions)
+# <Insert product name here> Telemetry FAQ (Frequently Asked Questions)
 
 ## How do I get started?
-Business Central can send telemetry to one or more **Azure Application Insights** (Application Insights) accounts.
+<Insert product name here> can send telemetry to one or more **Azure Application Insights** (Application Insights) accounts.
 The first step thus is for you to create an Application Insights account.
 See [HERE](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-telemetry) for instructions on how to do that.
 
-Once you have created the Application Insights account, make a note of the *instrumentation key*.
+Once you have created the Application Insights account, make a note of the *connection string*.
 
-The next step depends on whether you are an ISV or a VAR:
-* If you are an **ISV**, you must specify the instrumentation key in your app.json file. Once the app is installed in a Business Central environment, telemetry relating to your app will start to flow into your Application Insights account.
-
-* If you are a **VAR**, you must enter the instrumentation key in the Business Central Admin Center of your customer(s). Once you have done that, telemetry relating to your customers will start to flow into your Application Insights account. You can also set the instrumentation key using the Business Central Administration Center API.
+<Add guidance here>
 
 Please visit the documentation for more details (use CTRL + click to open in a new browser tab/page):
 * [Business Central Developer and IT-pro documentation - Monitoring and Analyzing Telemetry](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/telemetry-overview)
@@ -51,10 +48,6 @@ Use this KQL query [AvailableSignal.kql](KQL/Queries/HelperQueries/AvailableSign
 
 See all helper queries here: [HelperQueries](KQL/Queries/HelperQueries/)
 
-## I deployed Azure dashboards, but they show no data
-If you have data present in Application Insights, please check the setting in the *Time range* selector on the  dashboard:
-![Time range selector in Azure Dashboard](images/dashboard.png)
-
 ## What is the data retention policy in Application Insights?
 The default retention for Application Insights resources is 90 days. Different retention periods can be selected for each Application Insights resource. The full set of available retention periods is 30, 60, 90, 120, 180, 270, 365, 550 or 730 days.
 
@@ -75,20 +68,7 @@ You might also need to add the role assignment "Reader" to the person on the Res
 ## What about Privacy regulations such as GDPR?
 The Business Central service does not emit any End User Identifiable Information (EUII) to Application Insights. So the telemetry is born GDPR compliant. The service only emits data that is classified as either System Metadata or Organization Identifiable Information (OII). The meaning of these classifications are described here: [DataClassification Option Type](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/methods-auto/dataclassification/dataclassification-option)
 
-## Will you backport the Application Insights instrumentation to versions prior to 15.0?
-It took a lot of refactoring in the server and client to make this happen. So it is unlikely that we will backport the Application Insights instrumentation to versions prior to 15.0.
 
-For each new signal type we add, we try to backport to the current major release (16.x right now) if possible.
-
-For on-premises installations (private or public cloud), you can create an application/service that listens on the ETW (Event Tracing for Windows) events that we use for internal telemetry and then send them to Application Insights. Note that this approach is depending on internal telemetry events that might change and that are not documented by Microsoft.
-
-This is documented here: https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/tools-monitor-performance-counters-and-events and here https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/monitor-server-events
-
-See the Application Insights documentation for an introduction on how to emit telemetry from a .NET console application:
-[The Application Insights for .NET console applications](https://docs.microsoft.com/en-us/azure/azure-monitor/app/console)
-
-
-Another option is to emit ETW events to Azure Log Analytics, see Marije Brummels blog post [Using Azure Log Analytics on older Dynamics NAV versions (blog post)](https://marijebrummel.blog/2021/11/28/using-azure-log-analytics-on-older-dynamics-nav-versions/) or her Github sample repo [Using Azure Log Analytics with Dynamics NAV (Github repo)](https://github.com/marijebrummel/Azure.LogAnalytics.NAV) for examples.
 
 # Disclaimer
 Microsoft Corporation (“Microsoft”) grants you a nonexclusive, perpetual, royalty-free right to use and modify the software code provided by us for the purposes of illustration  ("Sample Code") and to reproduce and distribute the object code form of the Sample Code, provided that you agree: (i) to not use our name, logo, or trademarks to market your software product in which the Sample Code is embedded; (ii) to include a valid copyright notice on your software product in which the Sample Code is embedded; and (iii) to indemnify, hold harmless, and defend us and our suppliers from and against any claims or lawsuits, whether in an action of contract, tort or otherwise, including attorneys’ fees, that arise or result from the use or distribution of the Sample Code or the use or other dealings in the Sample Code. Unless applicable law gives you more rights, Microsoft reserves all other rights not expressly granted herein, whether by implication, estoppel or otherwise. 
