@@ -1,0 +1,12 @@
+
+// Use this query to track version changes (minor/major upgrades and/or hotfixes) in components in your environments
+// A version is only shown here if telemetry has been emitted (will happen if a user tries to login)
+traces
+| where timestamp > ago(60d) // change if your retention policy is different than the default
+| extend aadID = tostring( customDimensions.aadTenantId )
+| extend environmentName = tostring( customDimensions.environmentName )
+| extend component = tostring( customDimensions.component )
+| extend componentVersion = tostring( customDimensions.componentVersion )
+| summarize max(timestamp) by aadID, environmentName, component, componentVersion
+| order by aadID, environmentName,  max_timestamp desc 
+| limit 10
