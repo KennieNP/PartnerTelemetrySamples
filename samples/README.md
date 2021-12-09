@@ -3,6 +3,7 @@
 | Sample | Description | Yes, please take me there to learn more |
 | ------ | ------ | ------ |
 | Alerts | If something happens in your environment or for one of your customers that you need to take action on, it is better that the system sends you an alert.  | [Using alerts](Using-alerts) |
+| Excel | Want to make refreshable reports in Excel with data from Azure Application Insights?  | [Using Excel](Using-excel) |
 
 
 # Disclaimer
